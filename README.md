@@ -17,7 +17,6 @@ This project transforms raw economic data into _interactive dashboards_ that hel
 8. [Future Enhancements](#future-enhancements)
 9. [Folder & File Structure](#folder--file-structure)
 10. [Technologies & Tools](#technologies--tools)
-11. [Final Output](#final-output)
 
 ---
 
@@ -136,11 +135,12 @@ _Data Cleaning & Transformation Steps:_
 
 PowerBI_InflationAnalysis/
 │
-├── data/ # Raw and cleaned datasets
-├── reports/ # Exported reports or visuals
-├── screenshots/ # Dashboard preview images
-├── Inflation_Analysis.pbix # Main Power BI project file
-└── README.md # Project documentation
+├── data/            # Raw and cleaned datasets
+├── reports/         # Exported reports or visuals
+├── screenshots/     # Dashboard preview images
+├── Inflation_Analysis.pbix  # Main Power BI project file
+└── README.md        # Project documentation
+
 
 ## 🧰 Technologies & Tools
 
