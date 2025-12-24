@@ -17,6 +17,7 @@ This project transforms raw economic data into _interactive dashboards_ that hel
 8. [Future Enhancements](#future-enhancements)
 9. [Folder & File Structure](#folder--file-structure)
 10. [Technologies & Tools](#technologies--tools)
+11. [Final Output](#final-output)
 
 ---
 
@@ -41,23 +42,25 @@ The dashboard provides an _interactive interface_ to visualize inflation rates o
 
 ## 🗂 Data Sources & Preparation
 
-> (Note: Update these based on your actual dataset)
+_Primary dataset (included in this repository):_
 
-_Primary Data Source:_
+- `Project Executable Files/Dataset/global_inflation_data.csv`  
+  Annual average inflation (consumer prices) by country, with one column per year from 1980–2024.
 
-- Consumer Price Index (CPI) or Inflation data from government portals, World Bank, or IMF
+_Columns (simplified):_
 
-_Supplementary Data (if used):_
+- `country_name` – country or economy name  
+- `indicator_name` – description of the metric  
+- `1980` … `2024` – annual average inflation rate (%)
 
-- GDP growth data, commodity price data, sectoral indices, etc.
+_If you use this data outside this project, please add the appropriate citation for the original provider (for example, official statistics portals, IMF, or World Bank)._ 
 
-_Data Cleaning & Transformation Steps:_
+_Typical data preparation steps used for this report include:_
 
-- Removed missing or duplicate entries
-- Standardized date formats
-- Converted nominal values into percentage changes
-- Calculated Month-over-Month (MoM) and Year-over-Year (YoY) inflation rates
-- Derived rolling averages for smoothing volatility
+- Handling missing or inconsistent values
+- Standardizing numeric and date formats
+- Reshaping the data where needed for analysis
+- Creating derived measures (such as averages, growth, and volatility) inside Power BI using DAX
 
 ---
 
@@ -81,6 +84,16 @@ _Data Cleaning & Transformation Steps:_
 
 5. _Analysis_
    - Identified inflation spikes, trends, and correlations with key macroeconomic factors.
+
+### Project phases and repository mapping
+
+- **Project Initialization and Planning Phase/** – problem statement, scope definition, and planning artefacts.
+- **Data Collection and Preprocessing Phase/** – data discovery, collection, and cleaning/transformation artefacts.
+- **Data Visualization/** – exploratory charts and visual experiments used before finalizing the report.
+- **Dashboard/** – dashboard layout ideas and design references.
+- **Report/** – `Report Design Template.pdf` describing the final report layout and design.
+- **Project Executable Files/** – final Power BI report file and the dataset used by the model.
+- **Project Documentation and Demonstration/** – `Project Documentation.pdf` and `Project Demonstration.mp4` with the final explanation and walkthrough.
 
 ---
 
@@ -118,29 +131,45 @@ _Data Cleaning & Transformation Steps:_
    ```
 2. _Open the Power BI file_
 
-- Launch Power BI Desktop
-- Open Inflation_Analysis.pbix (or equivalent file)
+   - Launch Power BI Desktop.
+   - Open `Project Executable Files/PowerBIInflationAnalysis.pbix`.
 
-3. _Connect/refresh data_
+3. _Check or update the data source path_
 
-- Update file paths if needed
-- Refresh data source to fetch the latest data
+- Ensure the data source points to `Project Executable Files/Dataset/global_inflation_data.csv`.
+- If you moved the project, go to **Transform data ▸ Data source settings** in Power BI and update the file path.
+- Click **Refresh** to load the data.
 
-4. _Explore_
+4. _Explore the dashboard_
 
-- Use interactive filters and slicers to explore the data
-- Hover over charts for detailed tooltips and insights
+- Use interactive filters and slicers to explore the data.
+- Hover over charts for detailed tooltips and insights.
+- Switch between pages to view different perspectives (overview, trends, comparisons, etc.).
+
+5. _If you don’t have Power BI Desktop_
+
+- Open `Project Documentation and Demonstration/Project Documentation.pdf` for a static overview of the report.
+- Play `Project Documentation and Demonstration/Project Demonstration.mp4` to watch a recorded walkthrough of the dashboard.
 
 ## 🧾 Folder & File Structure
-
-PowerBI_InflationAnalysis/
+```
+Power-BI-Inflation-Analysis-Journeying-Through-Global-Economic-Terrain/
 │
-├── data/            # Raw and cleaned datasets
-├── reports/         # Exported reports or visuals
-├── screenshots/     # Dashboard preview images
-├── Inflation_Analysis.pbix  # Main Power BI project file
-└── README.md        # Project documentation
-
+├── Project Initialization and Planning Phase/          # Problem statement, scope, and planning artefacts
+├── Data Collection and Preprocessing Phase/           # Data collection, cleaning, and transformation artefacts
+├── Data Visualization/                               # Exploratory visualizations and design experiments
+├── Dashboard/                                        # Dashboard layout and design references
+├── Report/
+│   └── Report Design Template.pdf                    # Report layout and design reference
+├── Project Executable Files/
+│   ├── PowerBIInflationAnalysis.pbix                 # Main Power BI report file
+│   └── Dataset/
+│       └── global_inflation_data.csv                 # Historical annual average inflation by country (1980–2024)
+├── Project Documentation and Demonstration/
+│   ├── Project Documentation.pdf                     # Detailed project documentation
+│   └── Project Demonstration.mp4                     # Video walkthrough of the dashboard
+└── README.md                                         # Project overview and usage instructions
+```
 
 ## 🧰 Technologies & Tools
 
@@ -148,3 +177,9 @@ PowerBI_InflationAnalysis/
 - Microsoft Excel / CSV — Data preparation
 - DAX & Power Query — Data modeling and calculations
 - Data Visualization Techniques — KPIs, charts, cards, maps
+
+## Final Output
+
+- `Project Executable Files/PowerBIInflationAnalysis.pbix` – interactive Power BI report.
+- `Project Documentation and Demonstration/Project Documentation.pdf` – detailed written documentation.
+- `Project Documentation and Demonstration/Project Demonstration.mp4` – recorded walkthrough of the dashboard.
